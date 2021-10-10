@@ -1,3 +1,4 @@
+// POJ 1840
 #include <cstdio>
 #include <map>
 using namespace std;
