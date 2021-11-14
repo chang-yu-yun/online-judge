@@ -1,7 +1,7 @@
 # Online Judge
 
-### C++ Techniques
-#### Fast I/O
+## C++ Techniques
+### Fast I/O
 1. Disable the synchronization between the C and C++ standard streams
 ```c++
 std::ios_base::sync_with_stdio(false);
@@ -10,11 +10,28 @@ std::ios_base::sync_with_stdio(false);
 ```
 std::cin.tie(nullptr);
 ```
-#### Standard Library
-1. Iterators<br>
-    [`<iterator>`](https://en.cppreference.com/w/cpp/header/iterator)
-    1. `next(it);`
-    2. `prev(it);`
-    3. `advance(it, n);`
-    4. `distance(it1, it2);`
-    5. `iter_swap(it1, it2);`
+### Standard Library
+* [Iterators](https://en.cppreference.com/w/cpp/header/iterator)
+* [Containers](https://en.cppreference.com/w/cpp/container)
+
+***
+### Containers
+#### Sequence Containers
+##### [Vectors](https://en.cppreference.com/w/cpp/container/vector)
+1. Constructors
+    * Empty vector: `vector<T> v;` / `vector<T>{};`
+    * `vector<T> v(n);`
+    * `vector<T> v(n, val);`
+    * [List initialization](https://en.cppreference.com/w/cpp/language/list_initialization): `vector<T> v = {t1, t2, t3};` 
+2. Member Functions
+    * `push_back(elem)`
+    * `pop_back()`
+    * `resize(n, elem)`: Resizes the container so that it contains n elements.
+        - If `n` is greater than the current container size and `elem` is specified, then the new elements are initialized as copies of `elem`.
+    * `assign(n, elem)`: Assigns new contents to the vector, replacing its current contents, and modifying its size accordingly.
+
+##### [Arrays](https://en.cppreference.com/w/cpp/container/array)
+1. Constructors
+    * Empty array: `array<T, N> a;` / `array<T, N> a{};`
+2. Member Functions
+    * `fill(elem)`: Assigns the given `elem` value to all elements in the container.
