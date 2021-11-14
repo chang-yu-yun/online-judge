@@ -10,6 +10,7 @@ std::ios_base::sync_with_stdio(false);
 2. Untie `cin` from `cout`
 ```
 std::cin.tie(nullptr);
+std::cout.tie(nullptr);
 ```
 
 ### Standard Library
