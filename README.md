@@ -1,6 +1,7 @@
 # Online Judge
 
 ## C++ Techniques
+
 ### Fast I/O
 1. Disable the synchronization between the C and C++ standard streams
 ```c++
@@ -10,11 +11,14 @@ std::ios_base::sync_with_stdio(false);
 ```
 std::cin.tie(nullptr);
 ```
+
 ### Standard Library
 * [Iterators](https://en.cppreference.com/w/cpp/header/iterator)
 * [Containers](https://en.cppreference.com/w/cpp/container)
+* [Algorithms](https://en.cppreference.com/w/cpp/algorithm)
 
 ***
+
 ### Containers
 #### Sequence Containers
 ##### [Vectors](https://en.cppreference.com/w/cpp/container/vector)
@@ -35,3 +39,7 @@ std::cin.tie(nullptr);
     * Empty array: `array<T, N> a;` / `array<T, N> a{};`
 2. Member Functions
     * `fill(elem)`: Assigns the given `elem` value to all elements in the container.
+
+### Algorithms
+1. [nth_element](https://en.cppreference.com/w/cpp/algorithm/nth_element)
+    * `nth_element(first, nth, last);`
