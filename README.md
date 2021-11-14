@@ -8,7 +8,7 @@
 std::ios_base::sync_with_stdio(false);
 ```
 2. Untie `cin` from `cout`
-```
+```c++
 std::cin.tie(nullptr);
 std::cout.tie(nullptr);
 ```
