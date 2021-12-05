@@ -59,12 +59,17 @@ public:
         }
     }
 
-    int get_sum() const {
-        return accumulate(nums.begin(), nums.end(), 0);
+    long long int get_sum() const {
+        long long int sum = 0;
+        auto iter = nums.begin();
+        for (int i = 1; i <= nums.size(); i++, iter++) {
+            sum += *iter;
+        }
+        return sum;
     }
 
-    int get_odd_sum() const {
-        int sum = 0;
+    long long int get_odd_sum() const {
+        long long int sum = 0;
         auto iter = nums.begin();
         for (int i = 1; i <= nums.size(); i++, iter++) {
             if (i % 2) {
@@ -98,13 +103,14 @@ int main()
             line.perform_op(type, op1, op2);
         }
         bool rev = line.is_reversed();
-        int sum;
+        long long int sum;
         if (n % 2 || !rev) {
             sum = line.get_odd_sum();
         } else {
             sum = line.get_sum() - line.get_odd_sum();
         }
-        printf("Case %d: %d\n", case_idx++, sum);
+        // sum = line.get_odd_sum();
+        printf("Case %d: %lld\n", case_idx++, sum);
     }
     return 0;
 }
